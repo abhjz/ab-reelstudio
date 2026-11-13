@@ -1,15 +1,17 @@
 ---
-description: Make and schedule short videos. Usage - /reel <topic> [--style <name>] [--count N] [--account <label>]
-argument-hint: <topic> [--style name] [--count N] [--account label]
+description: Make and schedule short videos from a topic, your own script, a podcast link/video file, or a folder of clips.
+argument-hint: <topic | link | --script text/file | --from file/folder> [--style name] [--count N] [--account label] [--voice own|tts|none] [--teaser] [--ai] [--no-checkpoint]
 ---
 
-Run the full ab-reelstudio pipeline for: $ARGUMENTS
+Run the Ab ReelStudio pipeline for: $ARGUMENTS
 
-Follow the `reel-pipeline` skill exactly. Summary:
+Follow the `reel-pipeline` skill exactly:
 
-1. Load the profile (`.ab-reelstudio/profile.json`). If missing, run the `reel-setup` skill first.
-2. Resolve topic, style, count and target account from the arguments and the profile. Ask (AskUserQuestion) only for what is missing.
-3. Delegate the script to the `script-writer` agent (Sonnet).
-4. Delegate production to the `video-producer` agent (Opus), one video per script.
-5. Build the review gallery (`review-gallery` skill) and show it to the user.
-6. Only after explicit approval, schedule the approved videos with the `schedule-posts` skill. Never publish anything that was not approved.
+1. Load the profile (`.ab-reelstudio/profile.json`); if missing, run `reel-setup`.
+2. Detect the input. The script is optional:
+   - a topic -> script written by Sonnet
+   - `--script` or a long text -> your own script, checked not rewritten
+   - a link or `--from <video>` -> no script; best moments picked from the transcript (rights check first)
+   - `--from <folder>` -> no script; clips cut to the beat
+3. Run the matching path, build with Opus, show the review gallery.
+4. Only after explicit approval, schedule the approved videos on Zernio. Never publish anything that was not approved.

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <rect width="1000" height="300" rx="18" fill="#14161c"/>
+  <text x="500" y="44" text-anchor="middle" fill="#f4f1ea" font-size="22" font-weight="700">Ab ReelStudio — from a topic to a scheduled post</text>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b93a7"/></marker></defs>
+  <g font-size="15" text-anchor="middle">
+    <g><rect x="24" y="90" width="170" height="130" rx="14" fill="#232738" stroke="#3b4260"/><text x="109" y="125" fill="#f4f1ea" font-weight="700" font-size="17">1 · Topic</text><text x="109" y="152" fill="#aab1c5">/reel &lt;any topic&gt;</text><text x="109" y="176" fill="#aab1c5">your language</text><text x="109" y="200" fill="#aab1c5">your rules</text></g>
+    <g><rect x="224" y="90" width="170" height="130" rx="14" fill="#2a2140" stroke="#6d4fd1"/><text x="309" y="125" fill="#c9b8ff" font-weight="700" font-size="17">2 · Script</text><text x="309" y="152" fill="#aab1c5">Sonnet 5.5</text><text x="309" y="176" fill="#aab1c5">hook · beats · caption</text><text x="309" y="200" fill="#aab1c5">hashtags</text></g>
+    <g><rect x="424" y="90" width="170" height="130" rx="14" fill="#3a2418" stroke="#e08a3c"/><text x="509" y="125" fill="#ffc48a" font-weight="700" font-size="17">3 · Video</text><text x="509" y="152" fill="#aab1c5">Opus 5.5</text><text x="509" y="176" fill="#aab1c5">your video skills</text><text x="509" y="200" fill="#aab1c5">+ AI clips (optional)</text></g>
+    <g><rect x="624" y="90" width="170" height="130" rx="14" fill="#1d3329" stroke="#3fae7a"/><text x="709" y="125" fill="#9be3be" font-weight="700" font-size="17">4 · You approve</text><text x="709" y="152" fill="#aab1c5">review gallery</text><text x="709" y="176" fill="#aab1c5">approve · change</text><text x="709" y="200" fill="#aab1c5">· reject</text></g>
+    <g><rect x="824" y="90" width="152" height="130" rx="14" fill="#232738" stroke="#3b4260"/><text x="900" y="125" fill="#f4f1ea" font-weight="700" font-size="17">5 · Zernio</text><text x="900" y="152" fill="#aab1c5">scheduled posts</text><text x="900" y="176" fill="#aab1c5">TikTok · Instagram</text><text x="900" y="200" fill="#aab1c5">YouTube · more</text></g>
+  </g>
+  <g stroke="#8b93a7" stroke-width="2.5" marker-end="url(#a)"><line x1="196" y1="155" x2="220" y2="155"/><line x1="396" y1="155" x2="420" y2="155"/><line x1="596" y1="155" x2="620" y2="155"/><line x1="796" y1="155" x2="820" y2="155"/></g>
+  <text x="500" y="268" text-anchor="middle" fill="#8b93a7" font-size="15">Nothing is posted or scheduled before you approve that exact video.</text>
+</svg>

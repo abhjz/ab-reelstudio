@@ -34,12 +34,18 @@ Free-text rules go to `rules[]` verbatim (for example "no sound effects"). Rules
 ### 4. Styles
 Run the `install-styles` skill: it checks which styles are installed and offers to install the missing ones from their official sources, with licence notes. Never install anything without a yes. Save `enabledStyles[]` and `styleMode`: `fixed:<name>` | `rotate` | `ask-each-time`.
 
+### 4b. Quran reels (optional)
+Ask: "Do you want Quran recitation reels?" If yes, set `quran: true` and check the Tarteel connector (see `reel-doctor`). Ask which account should receive them and the posting slots.
+
 ### 5. AI generators (ask, optional)
 AskUserQuestion: "Which AI generation tools do you have?" (multi-select)
 - **Gemini Pro** → enables Google Flow (Veo clips), Nano Banana (images) and AI Studio (speech) through the user's own Chrome. Ask which of the three to use. The user signs in themselves.
 - **Higgsfield** → check for its connector tools; if missing, tell the user to add and sign in through `/mcp`.
 - **None** → code-drawn styles only.
 Save under `generators` (details in the `ai-generators` skill).
+
+### 5b. Full check
+Run the `reel-doctor` skill now and fix every red item the user wants (Zernio, Chrome + Gemini sign-in, Higgsfield, Tarteel, local tools, styles, podcast engine). Setup is not finished until the table is green for what the user chose.
 
 ### 6. Save
 Write the JSON:
@@ -54,7 +60,7 @@ Write the JSON:
   "accounts": [{"label":"main","platform":"tiktok","accountId":"...","purpose":"...","slots":["13:00","18:00"]}],
   "generators": {"gemini": {"enabled": false, "flow": false, "nanoBanana": false, "aiStudioTts": false}, "higgsfield": {"enabled": false}},
   "enabledStyles": ["..."], "styleMode": "rotate",
-  "checkpoint": true, "teaser": false
+  "checkpoint": true, "teaser": false, "quran": false
 }
 ```
 

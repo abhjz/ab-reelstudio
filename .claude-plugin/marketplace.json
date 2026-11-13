@@ -1,0 +1,11 @@
+{
+  "name": "ab-reelstudio",
+  "owner": { "name": "Ab ReelStudio contributors" },
+  "plugins": [
+    {
+      "name": "ab-reelstudio",
+      "source": "./",
+      "description": "Topic → script (Sonnet) → video (Opus) → your approval → scheduled posts via Zernio."
+    }
+  ]
+}

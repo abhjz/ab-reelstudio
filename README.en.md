@@ -144,6 +144,15 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 
 > ⚠️ **Links:** the plugin always asks "do you own this content or have permission?". If not, it stops. It never bypasses protections or paywalls.
 
+## 🎁 Ready-made templates inside the plugin
+
+| Template | What it is |
+|---|---|
+| `templates/explainer` | step-by-step explainers (for example brewing): **dark** with a code-drawn SVG and live counters, or **light** with real photo cutouts you make with Nano Banana plus a Flow clip |
+| `templates/quran` | three calm Quran looks: night sky, mushaf page, crescent that reacts to the audio; `build_quran.py` assembles audio and verses from Tarteel |
+
+> Templates are code only (no photos or clips) and contain no account names: the watermark is optional and empty by default.
+
 ## 🩺 Full setup check: `/reel-doctor`
 
 `/reel-setup` runs it for you and you can run it any time. One table of everything the plugin can use, with fixes offered (only with your OK):

@@ -77,13 +77,29 @@ claude plugin install ab-reelstudio@ab-reelstudio
 
 > 💡 **للنتيجة الأقوى:** شغّل `claude` على **Opus 5.5** (البلقن يثبّت سونيت للسكربت وأوبس للفيديو بروحه).
 
-**تحديث تلقائي:** بالطرفية العادية اكتب `claude` ← Enter، وبعدين:
+### 🔄 شغّل التحديث التلقائي — لا تتخطاها
+
+عشان كل ستايل وسكل جديد أضيفه يوصلك بروحه بدون ما تسوي شي:
+
+بالطرفية العادية اكتب `claude` ← Enter، وبعدين:
 
 ```
 /plugin  →  Marketplaces  →  ab-reelstudio  →  Enable auto-update
 ```
 
 > ℹ️ أمر `/plugin` تفاعلي ويشتغل **بالطرفية العادية بس** — مو داخل تبويب Code بتطبيق الديسكتوب.
+> ⚠️ **بدون هالخطوة ما يوصلك أي تحديث** — التحديث التلقائي مطفي افتراضياً للمتاجر الخارجية.
+> 🔁 تبي آخر نسخة الحين؟ `claude plugin update ab-reelstudio@ab-reelstudio` ثم أعد تشغيل `claude`.
+
+### 🌐 أو من claude.ai (بدون طرفية)
+
+تثبّته مرة وحدة ويطلع لك بالويب والديسكتوب والجوال، ويتحدّث بروحه:
+
+1. افتح **claude.ai** ← اضغط اسمك ← **Settings** ← **Customize** ← **Plugins** ← **Add** ← **Add marketplace**
+2. الصق `abhjz/ab-reelstudio` وأضفه، وبعدين أضف **Ab ReelStudio**.
+3. **Add** ← **Manage marketplaces** ← **⋮** ← شغّل **Sync automatically**.
+
+> ☝️ اختر طريقة وحدة بس (الطرفية **أو** claude.ai) عشان ما يتكرر البلقن عندك.
 
 ## 2️⃣ الإعداد — `/reel-setup` (أول مرة بس)
 

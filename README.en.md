@@ -75,13 +75,29 @@ claude plugin install ab-reelstudio@ab-reelstudio
 
 > 💡 **Best results:** run `claude` on **Opus 5.5**. The plugin pins Sonnet for scripts and Opus for videos by itself.
 
-**Auto-update:** in a normal terminal run `claude`, then:
+### 🔄 Turn on auto-update: don't skip this
+
+So every new style and skill I add reaches you on its own:
+
+In a normal terminal run `claude`, then:
 
 ```
 /plugin  →  Marketplaces  →  ab-reelstudio  →  Enable auto-update
 ```
 
 > ℹ️ `/plugin` is interactive and works in a **regular terminal only**, not inside the desktop app's Code tab.
+> ⚠️ **Without this step you get no updates.** Auto-update is off by default for third-party marketplaces.
+> 🔁 Want the latest now? `claude plugin update ab-reelstudio@ab-reelstudio`, then restart `claude`.
+
+### 🌐 Or from claude.ai (no terminal)
+
+Install once and it shows up on web, desktop and mobile, and keeps itself updated:
+
+1. Open **claude.ai** → click your name → **Settings** → **Customize** → **Plugins** → **Add** → **Add marketplace**
+2. Paste `abhjz/ab-reelstudio`, add it, then add **Ab ReelStudio**.
+3. **Add** → **Manage marketplaces** → **⋮** → turn on **Sync automatically**.
+
+> ☝️ Pick one way only (terminal **or** claude.ai) so you don't get duplicates.
 
 ## 2️⃣ Setup: `/reel-setup` (first time only)
 

@@ -1,0 +1,21 @@
+:root{--bg:#140f0b;--ink:#f1e6d6;--mute:#9c8f80;--card:#2a211b;--acc:#f0a347;}
+html,body{margin:0;width:720px;height:1280px;overflow:hidden;background:var(--bg);}
+body{font-family:"Alexandria",sans-serif;color:var(--ink);position:relative;background:radial-gradient(ellipse 420px 520px at 360px 720px,#4a2f14 0%,#22170e 55%,#120d09 100%);}
+svg{position:absolute;inset:0}
+.top{position:absolute;left:0;right:0;top:40px;text-align:center}
+.lbl{font-size:20px;color:var(--mute);font-weight:600}
+h1{margin:18px 0 0;font-size:76px;font-weight:800;line-height:1.15}
+.sub{font-size:34px;color:var(--acc);font-weight:600;margin-top:14px}
+.tiny{font-size:22px;color:var(--mute);margin-top:8px}
+.chips{position:absolute;top:280px;left:0;right:0;display:flex;justify-content:center;gap:12px}
+.chip{border:1.5px solid var(--acc);border-radius:12px;padding:8px 14px 9px;text-align:center;background:#1b140f}
+.chip b{display:block;font-size:26px}
+.chip span{font-size:15px;color:var(--mute);font-weight:600}
+.wm{position:absolute;left:24px;top:352px;font-size:22px;font-weight:600;color:#f1e6d6;direction:ltr;opacity:0;letter-spacing:.5px}
+.tile{position:absolute;top:400px;width:132px;height:80px;background:#2a211b;border-radius:14px;text-align:center;white-space:nowrap}
+.tile span{display:block;font-size:15px;color:var(--mute);font-weight:600;margin-top:10px}
+.tile b{display:block;font-size:30px;margin-top:2px;font-variant-numeric:tabular-nums}
+.card{position:absolute;left:44px;right:44px;top:988px;height:124px;background:var(--card);border-radius:18px;text-align:center;overflow:hidden}
+#bar{position:absolute;right:0;top:0;bottom:0;width:7px;background:var(--acc)}
+#ch{font-size:38px;font-weight:700;margin-top:12px;white-space:nowrap}
+#cs{font-size:30px;color:#f1e6d6;margin-top:4px;font-weight:600;white-space:nowrap}

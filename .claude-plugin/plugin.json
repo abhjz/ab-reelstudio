@@ -1,6 +1,6 @@
 {
   "name": "ab-reelstudio",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "End-to-end short-video pipeline: start from a topic, your own script, a podcast link or a folder of clips (the script is optional), Opus builds the video with your installed video skills, you approve in a review gallery, then it is scheduled to TikTok/Instagram/YouTube/etc. through Zernio.",
   "author": {
     "name": "Ab ReelStudio contributors"

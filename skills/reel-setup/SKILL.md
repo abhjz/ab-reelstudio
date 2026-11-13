@@ -26,7 +26,9 @@ For each account ask what it is for, in the user's words (niche, language, style
 - Music: allowed or never. SFX: allowed or never.
 - Branding: watermark text or handle? Mid-video "follow" ask? End CTA wording?
 - Timezone and daily posting slots per account (for example 13:00, 18:00).
-- Approve scripts before rendering, or only the final videos?
+- Checkpoint: approve script hooks / clip picks before rendering (default yes), or only the final videos?
+- 3-second teaser of the strongest moment on clips (default no)?
+- When the input is a podcast/video link: confirm they will only use content they own or have permission to clip.
 Free-text rules go to `rules[]` verbatim (for example "no sound effects"). Rules override every default.
 
 ### 4. Styles
@@ -52,7 +54,7 @@ Write the JSON:
   "accounts": [{"label":"main","platform":"tiktok","accountId":"...","purpose":"...","slots":["13:00","18:00"]}],
   "generators": {"gemini": {"enabled": false, "flow": false, "nanoBanana": false, "aiStudioTts": false}, "higgsfield": {"enabled": false}},
   "enabledStyles": ["..."], "styleMode": "rotate",
-  "autoApproveScripts": false
+  "checkpoint": true, "teaser": false
 }
 ```
 

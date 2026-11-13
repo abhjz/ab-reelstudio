@@ -2,7 +2,25 @@
   "name": "ab-reelstudio",
   "version": "0.1.0",
   "description": "End-to-end short-video pipeline: pick any topic, Sonnet writes the script, Opus builds the video with your installed video skills, you approve in a review gallery, then it is scheduled to TikTok/Instagram/YouTube/etc. through Zernio.",
-  "author": { "name": "Ab ReelStudio contributors" },
+  "author": {
+    "name": "Ab ReelStudio contributors"
+  },
   "license": "MIT",
-  "keywords": ["video", "reels", "shorts", "tiktok", "instagram", "zernio", "scheduling", "automation", "hyperframes"]
+  "keywords": [
+    "video",
+    "reels",
+    "shorts",
+    "tiktok",
+    "instagram",
+    "zernio",
+    "scheduling",
+    "automation",
+    "hyperframes"
+  ],
+  "mcpServers": {
+    "zernio": {
+      "type": "http",
+      "url": "https://mcp.zernio.com/mcp"
+    }
+  }
 }

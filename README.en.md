@@ -125,10 +125,23 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 
 | Step | Who | What happens |
 |---|---|---|
-| 📝 Script | **Sonnet** | hook, beats, narration, caption, hashtags in your voice |
+| 📝 Script (optional) | **Sonnet** | writes it from a topic, checks yours, or picks the best moments from a podcast |
 | 🎞️ Video | **Opus** | builds the video with the chosen style's skill and checks it (frozen frames, audio, cut-off text) |
 | 👀 Review | you | a page with every video, script, caption and time slot; pick **Approve / Change / Reject** |
 | 📅 Schedule | Zernio | only after you approve: uploads, validates, schedules at your times |
+
+## 🧭 4 ways to start: the script is optional
+
+| You have | Type | What happens |
+|---|---|---|
+| **Just a topic** | `/reel specialty coffee` | Sonnet writes the script → Opus builds the video |
+| **Your own script** | `/reel --script "your text"` | It only checks it (length, hook, caption) and **never changes a word** without your OK |
+| **A podcast or video link** | `/reel https://…` or `/reel --from video.mp4` | **No script**: rights check → download → transcript → Sonnet picks the best moments → Opus cuts them, adds captions and a hook |
+| **A folder of clips** | `/reel --from ./my-clips` | **No script**: cuts to the beat, vertical |
+
+**Options for any path:** `--teaser` (3 seconds of the strongest moment up front) · `--ai` (AI clips) · `--voice own|tts|none` · `--no-checkpoint` (no approval before rendering) · `--count 3`.
+
+> ⚠️ **Links:** the plugin always asks "do you own this content or have permission?". If not, it stops. It never bypasses protections or paywalls.
 
 ## 🗣️ What you can type
 
@@ -139,6 +152,8 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | A specific style | `/reel gravity --style motion-graphics` |
 | For one account | `/reel coffee --account main` |
 | Surprise me | `/reel surprise me` |
+| From a podcast | `/reel https://…` |
+| Your own script | `/reel --script "…"` |
 | Change settings | `/reel-setup` |
 | Install styles | `/reel-install-styles` |
 
@@ -151,7 +166,8 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | 🤖 Agent | `script-writer` (Sonnet 5.5) | writes the script: hook, beats, narration, caption, hashtags |
 | 🤖 Agent | `video-producer` (Opus 5.5) | builds the video with the style's skill and checks it |
 | 🛠️ Skill | `reel-setup` | setup: Zernio, accounts, taste, rules |
-| 🛠️ Skill | `reel-pipeline` | runs all the steps in order |
+| 🛠️ Skill | `reel-pipeline` | detects the input type and runs the steps in order |
+| 🛠️ Skill | `source-reels` | reels from a podcast, video or folder of clips, no script |
 | 🛠️ Skill | `video-styles` | the style catalog and when to pick each |
 | 🛠️ Skill | `install-styles` | checks and installs video skills from their sources |
 | 🛠️ Skill | `ai-generators` | Google Flow / Nano Banana / AI Studio / Higgsfield |

@@ -16,6 +16,9 @@ ab-reelstudio bundles NO third-party video skills. It drives whichever of these 
 | `style-episode` | `style-sampling` | A known episode format (collage, finance, science, 3D brand, true crime) on any topic | follows HyperFrames | via HyperFrames |
 | `reverse-copy` | `reverse-any-video` | Rebuild a reference video the user owns/has rights to | Only with rights to the source | via HyperFrames |
 | `footage-cut` | the `source-reels` skill, plus any installed editing skill (for example `podcast-video`, `montage-video`, `video-ad-editor`) or plain ffmpeg | The user supplies footage (podcast, interview, clips) and wants reels cut from it | Only footage the user has rights to | n/a |
+| `podcast-engine` | `video-ad-editor` / `podcast-video` / `montage-video` (plugin `majed-video`, MIT) | Cutting podcasts and interviews into captioned vertical reels with word-timed Arabic captions and hook cards | MIT | `install-styles.sh podcast-engine` |
+| `quran-ayah` | the `quran-reels` skill + HyperFrames | Quran recitation reels, verse by verse, no music | text and audio from the Tarteel connector | add the Tarteel connector via `/mcp` |
+| `code-explainer` | HyperFrames or hand-written HTML/SVG rendered with puppeteer | Animated step-by-step explainers (for example coffee brewing) with live counters, cards and a cheat-sheet ending | none | `install-styles.sh render-tools` |
 | `ai-footage` | `ai-generators` skill | Real-looking footage/images/voice: Google Flow (Veo), Nano Banana, AI Studio TTS, or Higgsfield. Combine with any style above as B-roll or hook clips. | Needs the user's own paid account; respect quotas | see `ai-generators` |
 | `ffmpeg-basic` | none | Absolute fallback: images/clips + captions + audio | none | ffmpeg |
 

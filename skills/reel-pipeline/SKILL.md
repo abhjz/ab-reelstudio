@@ -19,8 +19,9 @@ Relevant fields: `checkpoint` (default true), `teaser` (default false), `voice.m
 | **Own script** | `--script <file or text>`, or a long multi-sentence text | **B** |
 | **Link or video file** | URL (`http...`), or `--from <file>` pointing to a video/audio file | **C** |
 | **Folder of clips/images** | `--from <folder>`, or a path that is a directory | **D** |
+| **Quran recitation** | `--quran <surah[:from-to]>` | **E** |
 
-If it is ambiguous, ask once with AskUserQuestion. Flags override detection: `--script`, `--from`, `--style`, `--count`, `--account`, `--voice own|tts|none`, `--teaser`, `--ai`, `--no-checkpoint`.
+If it is ambiguous, ask once with AskUserQuestion. Flags override detection: `--script`, `--from`, `--quran`, `--reciter`, `--style`, `--count`, `--account`, `--voice own|tts|none`, `--teaser`, `--ai`, `--no-checkpoint`.
 Resolve topic/style/count/account from args + profile; ask only for what is missing.
 
 ## 2. Paths
@@ -44,6 +45,9 @@ The speaker's original audio is kept (no voice step).
 1. Scan the clips (`source-reels`, footage section): best moment per clip, audio beat if there is music.
 2. Optional: `script-writer` mode `captions` only if the user wants text over the clips.
 3. Checkpoint on the plan (if on), then `video-producer` mode `edit`.
+
+### E. Quran recitation
+Run the `quran-reels` skill (needs the Tarteel connector). Text and audio come from the connector; no script is written; no music or effects. Then review and schedule as usual.
 
 ## 3. Voice (paths A, B, D)
 - `own`: ask the user to record or provide the audio; trim and time it to words.

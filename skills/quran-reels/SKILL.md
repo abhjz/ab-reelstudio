@@ -22,7 +22,7 @@ Needs the **Tarteel connector** (tools such as `list_reciters`, `lookup_reciters
 1. Resolve the reciter and surah/verse range; call `play_ayahs` to get per-verse audio URLs. Prepend the Basmala (verse 1:1) except for Surah 9 and for Surah 1 (where it is verse 1).
 2. Download each verse's audio, convert to 48 kHz mono WAV, concatenate, and record each verse's start time (1.0 s of silence at the start).
 3. Fetch the exact Uthmani text per verse (and the translation if requested).
-4. Build the page: one verse at a time in a Quran-appropriate font (for example Amiri Quran, loaded from Google Fonts or a local file), with the verse number in an ornate marker, progress dots, and the verse change timed to the audio start times.
-5. Render 1080x1920 at 30 fps with the style skill (HyperFrames by default), mux with the audio, normalise loudness.
+4. Build the page with the shipped templates: write a `config.json` (template `sky`, `mushaf` or `moon`, items with the connector text and downloaded audio files) and run `python3 ${CLAUDE_PLUGIN_ROOT}/templates/quran/build_quran.py config.json`. It concatenates the audio, times each verse and writes `reel.html`. Pick a different template for each reel. Details: `templates/quran/README.md`.
+5. Render frames with `HTML=reel.html OUT=frames node ${CLAUDE_PLUGIN_ROOT}/templates/explainer/render.js all` (needs `npm i puppeteer-core` and Chrome), then ffmpeg the frames at 30 fps with `recitation.wav`, loudnorm about -14. HyperFrames also works if the user prefers.
 6. Verify: duration equals the audio length, text matches the connector output character for character, no clipped Arabic diacritics.
 7. Review gallery, then schedule on the account the user designated for Quran content. Suggested slots come from the profile.

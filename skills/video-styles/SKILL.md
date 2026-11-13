@@ -17,10 +17,16 @@ ab-reelstudio bundles NO third-party video skills. It drives whichever of these 
 | `reverse-copy` | `reverse-any-video` | Rebuild a reference video the user owns/has rights to | Only with rights to the source | via HyperFrames |
 | `footage-cut` | the `source-reels` skill, plus any installed editing skill (for example `podcast-video`, `montage-video`, `video-ad-editor`) or plain ffmpeg | The user supplies footage (podcast, interview, clips) and wants reels cut from it | Only footage the user has rights to | n/a |
 | `podcast-engine` | `video-ad-editor` / `podcast-video` / `montage-video` (plugin `majed-video`, MIT) | Cutting podcasts and interviews into captioned vertical reels with word-timed Arabic captions and hook cards | MIT | `install-styles.sh podcast-engine` |
-| `quran-ayah` | the `quran-reels` skill + HyperFrames | Quran recitation reels, verse by verse, no music | text and audio from the Tarteel connector | add the Tarteel connector via `/mcp` |
-| `code-explainer` | HyperFrames or hand-written HTML/SVG rendered with puppeteer | Animated step-by-step explainers (for example coffee brewing) with live counters, cards and a cheat-sheet ending | none | `install-styles.sh render-tools` |
+| `quran-ayah` | the `quran-reels` skill + `templates/quran` (sky, mushaf, moon) | Quran recitation reels, verse by verse, no music; a different look each reel | text and audio from the Tarteel connector | add the Tarteel connector via `/mcp` |
+| `code-explainer` | `templates/explainer` (dark and light looks) rendered with puppeteer | Animated step-by-step explainers (for example brewing) with live counters, cards, word-timed captions and a comment-question ending. Light look uses real photo cutouts made with Nano Banana. | none (MIT, shipped with the plugin) | `install-styles.sh render-tools`, then `npm i puppeteer-core` |
 | `ai-footage` | `ai-generators` skill | Real-looking footage/images/voice: Google Flow (Veo), Nano Banana, AI Studio TTS, or Higgsfield. Combine with any style above as B-roll or hook clips. | Needs the user's own paid account; respect quotas | see `ai-generators` |
 | `ffmpeg-basic` | none | Absolute fallback: images/clips + captions + audio | none | ffmpeg |
+
+## Shipped templates
+The plugin ships its own templates under `${CLAUDE_PLUGIN_ROOT}/templates/`:
+- `explainer/`: dark (style A) and light (style B) how-to explainers. Read `explainer/README.md`, copy `example_dark.py`, change chunks/scene/phases.
+- `quran/`: three calm looks plus `build_quran.py`. Read `quran/README.md`.
+Copy a template into the run folder before editing it; never edit the files inside the plugin.
 
 ## Choosing a style (when mode is ask/rotate/auto)
 - Numbers, steps, tutorials, product → `motion-graphics`

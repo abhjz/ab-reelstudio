@@ -15,7 +15,7 @@ ab-reelstudio bundles NO third-party video skills. It drives whichever of these 
 | `one-take` | `onetake` | Launch/teaser clips from screenshots | **PolyForm Noncommercial. Do NOT use for monetized or business accounts.** Ask the user to confirm non-commercial use every time. | `git clone https://github.com/feitangyuan/onetake.git ~/.claude/skills/onetake` |
 | `style-episode` | `style-sampling` | A known episode format (collage, finance, science, 3D brand, true crime) on any topic | follows HyperFrames | via HyperFrames |
 | `reverse-copy` | `reverse-any-video` | Rebuild a reference video the user owns/has rights to | Only with rights to the source | via HyperFrames |
-| `footage-cut` | any installed editing skill (for example `podcast-video`, `montage-video`, `video-ad-editor`) or plain ffmpeg | The user supplies footage (podcast, interview, clips) and wants reels cut from it | Only footage the user has rights to | n/a |
+| `footage-cut` | the `source-reels` skill, plus any installed editing skill (for example `podcast-video`, `montage-video`, `video-ad-editor`) or plain ffmpeg | The user supplies footage (podcast, interview, clips) and wants reels cut from it | Only footage the user has rights to | n/a |
 | `ai-footage` | `ai-generators` skill | Real-looking footage/images/voice: Google Flow (Veo), Nano Banana, AI Studio TTS, or Higgsfield. Combine with any style above as B-roll or hook clips. | Needs the user's own paid account; respect quotas | see `ai-generators` |
 | `ffmpeg-basic` | none | Absolute fallback: images/clips + captions + audio | none | ffmpeg |
 

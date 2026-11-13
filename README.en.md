@@ -130,7 +130,7 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | 👀 Review | you | a page with every video, script, caption and time slot; pick **Approve / Change / Reject** |
 | 📅 Schedule | Zernio | only after you approve: uploads, validates, schedules at your times |
 
-## 🧭 4 ways to start: the script is optional
+## 🧭 5 ways to start: the script is optional
 
 | You have | Type | What happens |
 |---|---|---|
@@ -138,10 +138,25 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | **Your own script** | `/reel --script "your text"` | It only checks it (length, hook, caption) and **never changes a word** without your OK |
 | **A podcast or video link** | `/reel https://…` or `/reel --from video.mp4` | **No script**: rights check → download → transcript → Sonnet picks the best moments → Opus cuts them, adds captions and a hook |
 | **A folder of clips** | `/reel --from ./my-clips` | **No script**: cuts to the beat, vertical |
+| **Quran recitation** | `/reel --quran 93:1-11 --reciter <name>` | Text and audio from the **Tarteel** connector, verse by verse, **no music or effects** |
 
 **Options for any path:** `--teaser` (3 seconds of the strongest moment up front) · `--ai` (AI clips) · `--voice own|tts|none` · `--no-checkpoint` (no approval before rendering) · `--count 3`.
 
 > ⚠️ **Links:** the plugin always asks "do you own this content or have permission?". If not, it stops. It never bypasses protections or paywalls.
+
+## 🩺 Full setup check: `/reel-doctor`
+
+`/reel-setup` runs it for you and you can run it any time. One table of everything the plugin can use, with fixes offered (only with your OK):
+
+| Item | What it checks |
+|---|---|
+| **Zernio** | connection and accounts (required for scheduling) |
+| **Claude in Chrome** + **Gemini Pro** | Google Flow (Veo), Nano Banana, AI Studio voice |
+| **Higgsfield** | optional |
+| **Tarteel** | for Quran reels |
+| Local tools | ffmpeg · Node · Python · pillow · yt-dlp · Whisper |
+| Styles | HyperFrames · Remotion · Lemo-Opuscar · onetake · Clawd |
+| Podcast engine | `majed-video` (MIT) for cutting podcasts with Arabic captions and hooks |
 
 ## 🗣️ What you can type
 
@@ -156,6 +171,8 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | Your own script | `/reel --script "…"` |
 | Change settings | `/reel-setup` |
 | Install styles | `/reel-install-styles` |
+| Check everything | `/reel-doctor` |
+| Quran | `/reel --quran 94 --reciter <name>` |
 
 ## 🧩 What's inside the plugin
 
@@ -167,13 +184,15 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | 🤖 Agent | `video-producer` (Opus 5.5) | builds the video with the style's skill and checks it |
 | 🛠️ Skill | `reel-setup` | setup: Zernio, accounts, taste, rules |
 | 🛠️ Skill | `reel-pipeline` | detects the input type and runs the steps in order |
+| 🛠️ Skill | `quran-reels` | verse-by-verse recitation from Tarteel, no music |
+| 🛠️ Skill | `reel-doctor` | checks every setting and fixes it with your OK |
 | 🛠️ Skill | `source-reels` | reels from a podcast, video or folder of clips, no script |
 | 🛠️ Skill | `video-styles` | the style catalog and when to pick each |
 | 🛠️ Skill | `install-styles` | checks and installs video skills from their sources |
 | 🛠️ Skill | `ai-generators` | Google Flow / Nano Banana / AI Studio / Higgsfield |
 | 🛠️ Skill | `review-gallery` | review page: approve / change / reject |
 | 🛠️ Skill | `schedule-posts` | uploads, validates, schedules on Zernio |
-| ⌨️ Commands | `/reel` · `/reel-setup` · `/reel-install-styles` | |
+| ⌨️ Commands | `/reel` · `/reel-setup` · `/reel-install-styles` · `/reel-doctor` | |
 | 🔌 Connection | Zernio MCP server | `https://mcp.zernio.com/mcp` |
 
 ## 🎨 Styles and third-party skills
@@ -187,6 +206,7 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | 🎞️ **Cinematic film** | [Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar) by LemoLab | stories, documentary, art styles (oil, watercolor, ukiyo-e); slow and token-heavy | demo films CC BY 4.0 |
 | 🎥 **One take** | [onetake](https://github.com/feitangyuan/onetake) | teasers and launches from screenshots | **PolyForm Noncommercial: not for monetized accounts** ⛔ |
 | 🖌️ **Brush animation** | [Clawd / ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase) | stories with a cartoon character | MIT |
+| 🎙️ **Podcast engine** | [majed-video](https://github.com/majedphotos/video-ad-editor) by majedphotos | cutting podcasts and interviews with Arabic captions and hook cards | MIT |
 | 🎬 **Cut from your footage** | any editing skill you have, or ffmpeg | podcasts, interviews, clips you own | — |
 | 🛟 **Fallback** | ffmpeg | when nothing is installed | — |
 

@@ -111,7 +111,7 @@ It asks one question at a time:
 
 1. **Connect Zernio.** The plugin ships the Zernio server. Type `/mcp`, pick **zernio**, sign in. **Never paste keys into the chat.**
 2. **Accounts.** It lists the accounts connected to Zernio (TikTok, Instagram, YouTube…). You choose where videos go and describe each account's content.
-3. **Your taste.** Language and dialect, tone, length, voice (your own / AI / none), music or not, sound effects or not, watermark, posting times.
+3. **Your taste.** Language and dialect, tone, length, voice (your own / AI / none), music or not, sound effects or not, watermark, posting times, and **colors** (your brand colors, or a tested palette).
 4. **AI tools.** Do you have **Gemini Pro** (Google Flow, Nano Banana, AI Studio through your own Chrome) or **Higgsfield**? Or neither?
 5. **Styles.** It checks what is installed, lists what is missing, and installs it with your OK (details below).
 
@@ -199,10 +199,33 @@ Everything you say stays **on your machine** (`.ab-reelstudio/profile.json`).
 | 🛠️ Skill | `video-styles` | the style catalog and when to pick each |
 | 🛠️ Skill | `install-styles` | checks and installs video skills from their sources |
 | 🛠️ Skill | `ai-generators` | Google Flow / Nano Banana / AI Studio / Higgsfield |
+| 🛠️ Skill | `palette-603010` | 9 tested 60/30/10 color palettes + contrast checker for captions and graphics |
 | 🛠️ Skill | `review-gallery` | review page: approve / change / reject |
 | 🛠️ Skill | `schedule-posts` | uploads, validates, schedules on Zernio |
 | ⌨️ Commands | `/reel` · `/reel-setup` · `/reel-install-styles` · `/reel-doctor` | |
 | 🔌 Connection | Zernio MCP server | `https://mcp.zernio.com/mcp` |
+
+## 🎨 Colors: 60/30/10 palettes
+
+Not sure which colors go together? The plugin bundles the **`palette-603010`** skill: nine tested palettes (base 60% · support 30% · accent 10%) with exact hex codes, pairing rules and a contrast checker.
+
+| Palette | 60% base | 30% support | 10% accent |
+|---|---|---|---|
+| Sky Fresh | `#52C5FF` | `#FFFFFF` | `#FF1088` |
+| Petrol Gaming | `#062C30` | `#E5D4B8` | `#FF4E00` |
+| Monochrome Brown | `#3D231A` | `#F3EBDD` | `#00F0FF` |
+| Teal Brand | `#0B434C` | `#FFFFFF` | `#FF5533` |
+| Midnight Neon | `#0A0A0A` | `#FFFFFF` | `#55FF00` |
+| Navy Idea | `#031326` | `#FFFFFF` | `#D100D1` |
+| Mauve Loud | `#913768` | `#C29A74` | `#FDD001` |
+| Olive Standout | `#778A3F` | `#6E4B2C` | `#F16619` |
+| Brick Hook | `#C15B46` | `#ABA6A3` | `#45DBE1` |
+
+- **Your brand colors win.** `/reel-setup` saves them as `palette` in your profile; otherwise it offers 2–3 palettes that fit your niche.
+- **Used for the graphics, never your footage.** Captions, hook cards, lower thirds, progress bars and animated graphics follow the palette. Your own clips are never recolored.
+- **Captions are contrast-checked.** Text over video must pass 4.5:1, otherwise the producer adds a plate or outline.
+- **Series trick:** keep base and support fixed and swap only the accent per episode, so the whole channel looks consistent.
+- The review page shows each video's palette swatches.
 
 ## 🎨 Styles and third-party skills
 

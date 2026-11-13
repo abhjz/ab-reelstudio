@@ -35,6 +35,24 @@ Copy a template into the run folder before editing it; never edit the files insi
 - User footage given → `footage-cut`
 - Series of N videos → rotate through enabled styles, never the same style twice in a row.
 
+## Colors
+Colors follow the `palette-603010` skill (60% base, 30% support, 10% accent). Use the profile `palette` if set; otherwise start from these and adjust to the topic:
+
+| Style | Try first | Alternative |
+|---|---|---|
+| `motion-graphics` | Teal Brand | Navy Idea |
+| `remotion` | Navy Idea | Midnight Neon |
+| `cinematic-film` | Monochrome Brown | Petrol Gaming |
+| `one-take` | Midnight Neon | Sky Fresh |
+| `style-episode` / `reverse-copy` | follow the reference | Petrol Gaming |
+| `footage-cut` / `podcast-engine` | Petrol Gaming (captions + hook card only) | Mauve Loud |
+| `quran-ayah` | Petrol Gaming (accent kept very light) | Navy Idea |
+| `code-explainer` | Petrol Gaming | Olive Standout |
+| `ai-footage` | match the generated footage | Monochrome Brown |
+| `ffmpeg-basic` | Midnight Neon | Sky Fresh |
+
+Series: keep base and support fixed, swap only the accent per episode.
+
 ## Rules for the producer
 1. Invoke the chosen skill with the Skill tool and follow its own contract.
 2. If it is missing: fall back to `motion-graphics`, then `ffmpeg-basic`. Tell the user which fallback was used.

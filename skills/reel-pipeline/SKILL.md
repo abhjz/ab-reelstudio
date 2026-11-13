@@ -9,7 +9,7 @@ Work folder: `./ab-reelstudio-runs/<YYYY-MM-DD-slug>/` with `scripts/`, `source/
 
 ## 0. Profile
 Read `.ab-reelstudio/profile.json`. Missing or no accounts connected → run `reel-setup` first, then continue.
-Relevant fields: `checkpoint` (default true), `teaser` (default false), `voice.method` (`own|tts|none`), `generators`, `rules[]`, `accounts[]`.
+Relevant fields: `palette` + `paletteMode` (colors, see `palette-603010`), `checkpoint` (default true), `teaser` (default false), `voice.method` (`own|tts|none`), `generators`, `rules[]`, `accounts[]`.
 
 ## 1. Detect the input (the script is optional)
 

@@ -1,0 +1,14 @@
+{
+  "rule": "60% base / 30% support / 10% accent",
+  "palettes": [
+    {"slug": "sky-fresh", "name": "Sky Fresh", "ar": "سماوي · أبيض · فوشيا", "mood": "light, clean, skincare", "base": "#52C5FF", "support": "#FFFFFF", "accent": "#FF1088"},
+    {"slug": "petrol-gaming", "name": "Petrol Gaming", "ar": "بترولي · بيج · برتقالي", "mood": "dark, premium, gaming", "base": "#062C30", "support": "#E5D4B8", "accent": "#FF4E00"},
+    {"slug": "monochrome-brown", "name": "Monochrome Brown", "ar": "بني · عاجي · سيان", "mood": "warm, classic, fashion", "base": "#3D231A", "support": "#F3EBDD", "accent": "#00F0FF"},
+    {"slug": "teal-brand", "name": "Teal Brand", "ar": "بترولي · أبيض · برتقالي نيون", "mood": "dark, corporate-bold", "base": "#0B434C", "support": "#FFFFFF", "accent": "#FF5533"},
+    {"slug": "midnight-neon", "name": "Midnight Neon", "ar": "أسود · أبيض · أخضر نيون", "mood": "dark, tech, games", "base": "#0A0A0A", "support": "#FFFFFF", "accent": "#55FF00"},
+    {"slug": "navy-idea", "name": "Navy Idea", "ar": "كحلي · أبيض · موف نيون", "mood": "dark, serious, marketing", "base": "#031326", "support": "#FFFFFF", "accent": "#D100D1"},
+    {"slug": "mauve-loud", "name": "Mauve Loud", "ar": "موف · بيج · أصفر", "mood": "warm, bold, playful", "base": "#913768", "support": "#C29A74", "accent": "#FDD001"},
+    {"slug": "olive-standout", "name": "Olive Standout", "ar": "أخضر · بني · برتقالي", "mood": "warm, natural, earthy", "base": "#778A3F", "support": "#6E4B2C", "accent": "#F16619"},
+    {"slug": "brick-hook", "name": "Brick Hook", "ar": "طوبي · رمادي · تركواز", "mood": "warm, confident", "base": "#C15B46", "support": "#ABA6A3", "accent": "#45DBE1", "note": "accent approximate (sampled from video)"}
+  ]
+}

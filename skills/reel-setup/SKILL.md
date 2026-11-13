@@ -24,6 +24,7 @@ For each account ask what it is for, in the user's words (niche, language, style
 - Target length (default 30-45s).
 - Voice method: record own voice / use an installed TTS / no voice (captions + music).
 - Music: allowed or never. SFX: allowed or never.
+- Colors: brand colors for captions, hook cards and graphics (base / support / accent hex)? Or pick from the `palette-603010` book (offer 2-3 that fit the niche, hex with roles), or choose per video. Save as `palette` and `paletteMode` (`brand` | `book` | `per-video`).
 - Branding: watermark text or handle? Mid-video "follow" ask? End CTA wording?
 - Timezone and daily posting slots per account (for example 13:00, 18:00).
 - Checkpoint: approve script hooks / clip picks before rendering (default yes), or only the final videos?
@@ -57,6 +58,7 @@ Write the JSON:
   "language": "...", "tone": "...", "defaultLengthSec": 40,
   "voice": {"method": "own|tts|none", "notes": ""},
   "rules": ["..."],
+  "palette": {"base": "#062C30", "support": "#E5D4B8", "accent": "#FF4E00"}, "paletteMode": "book",
   "accounts": [{"label":"main","platform":"tiktok","accountId":"...","purpose":"...","slots":["13:00","18:00"]}],
   "generators": {"gemini": {"enabled": false, "flow": false, "nanoBanana": false, "aiStudioTts": false}, "higgsfield": {"enabled": false}},
   "enabledStyles": ["..."], "styleMode": "rotate",
